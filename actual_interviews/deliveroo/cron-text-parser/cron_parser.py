@@ -5,11 +5,11 @@ from cron_element_type import CronElementType
 
 class CronParser:
     def __init__(self) -> None:
-        self.minutesElem: CronElement
-        self.hoursElem: CronElement
-        self.dayOfMonthElem: CronElement
-        self.monthsElem: CronElement
-        self.dayOfWeekElem: CronElement
+        self.minutesElem: CronElement = None
+        self.hoursElem: CronElement = None
+        self.dayOfMonthElem: CronElement = None
+        self.monthsElem: CronElement = None
+        self.dayOfWeekElem: CronElement = None
 
     def parse(self, cronStr: str) -> str:
         cronStrElements = cronStr.split(" ")
